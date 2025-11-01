@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRICK-SHARE - Comparte tus creaciones LEGO</title>
+    <!-- Importar fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+
+<body> 
+<!--------------------------------- HEADER----------------------------------------->
+    <header>
+    <div class="logo-container"> <!-- Contenedor del logo brick -->
+        <img class="logo" src="logo.png" alt="Logo LEGO" />
+    </div>
+    
+    <div class="titulo-container"> <!-- Contenedor del titulo y el muñeco -->
+        <div class="muñeco-container"> <!-- Mini-contenedor con el muñeco -->
+            <img src="gegant2.png" alt="Fondo decorativo" />
+        </div>
+        <h1 class="site-titulo">BRICK-SHARE</h1> <!--Titulo central-->
+    </div>
+    
+    <div style="width: 200px;"></div>
+</header>
+<!--------------------------------------------------------------------------------->
+
+
+
+<!------------------------------- BOTON NOCHE-DIA------------------------------------>
+<div class="luna-container">
+    <button id="luna-container2" onclick="nochedia()" >🌙 Modo noche</button>
+</div>
+<!--------------------------------------------------------------------------------->
+
+
+
+<!---------------------------BOTÓN MENÚ DE NAVEGACION------------------------------->
+    <div class="menu-control-container"> container-boton-menu
+        <button class="menu-control" id="menuControl">☰ MOSTRAR MENÚ</button>
+    </div>
+<!--------------------------------------------------------------------------------->
+    
+<!-------------------CONTAINER DIV CON LOS ELEMENTOS DE LA WEB------------------------>
+<!-- Dentro de este div tenemos por un lado el navegador y por otro el main que tiene dentro las seccinoes-->
+    <div class="container">
+
+        <nav class="sidebar" id="sidebar"> 
+            <button onclick="mostrarSeccion('intro')">INTRODUCCIÓN</button> <!--El parametro que le doy es = al id de cada sección-->
+            <button onclick="mostrarSeccion('galeria')">GALERÍA LEGO</button>
+            <button onclick="mostrarSeccion('consejos')">CONSEJOS LEGO</button>
+            <button onclick="mostrarSeccion('creaciones')">CREACIONES</button>
+            <button onclick="mostrarSeccion('comparte')">COMPARTE</button>
+            <button onclick="mostrarSeccion('contacta')">CONTACTA</button>
+        </nav>
+
+        <main class="main-content"> 
+            <section id="intro" class="content active">
+                <h2>BIENVENIDO A BRICK-SHARE</h2>
+                <p>¡La comunidad definitiva para amantes de LEGO! Comparte tus construcciones, descubre ideas increíbles y conecta con otros builders.</p>
+                <p>Desde sets oficiales hasta MOCs (My Own Creation), aquí encontrarás inspiración para tu próximo proyecto.</p>
+                <p>En Brick-Share ordenamos las creaciones en estas categorías: </p>
+                 <ul>
+                     <li>Arquitectura</li>
+                     <li>Vehículos</li>
+                     <li>Star Wars</li>
+                     <li>Técnicas y mecánicas</li>
+                     <li>Esculturas</li>
+                     <li>Otras creaciones</li>
+                 </ul>
+            </section>
+
+            <section id="galeria" class="content">
+                <h2>GALERÍA DE CONSTRUCCIONES LEGO</h2>
+                <p>Explora impresionantes construcciones de nuestra comunidad.</p>
+                <p>Desde arquitectura y vehículos hasta escenas de películas y creaciones originales.</p>
+                <div id="contenedor-galeria" class="galeria-flex"></div> <!--En este contenedor estará la galería-->
+            </section>
+
+            <section id="consejos" class="content">
+                <h2>CONSEJOS PARA BUILDERS</h2>
+                <ol>
+                     <li>Planifica tu diseño antes de empezar.</li>
+                     <li>Clasifica las piezas por tipo y color.</li>
+                     <li>Construye una base sólida.</li>
+                     <li>Agrega detalles y texturas poco a poco.</li>
+                     <li>Toma fotos de tu progreso para documentar tu creación.</li>
+                </ol>
+
+
+            </section>
+
+            <section id="creaciones" class="content">
+                <h2>CREACIONES DE LA COMUNIDAD</h2>
+                <p>Admira los increíbles trabajos compartidos por otros entusiastas de LEGO.</p>
+                <p>Desde construcciones técnicas hasta esculturas artísticas.</p>
+                <p>Top Construccinoes de la Comunidad:</p>
+                 <table class="tabla-creaciones">
+                    <thead>
+                        <tr>
+                             <th>Nombre</th>
+                             <th>Autor</th>
+                            <th>Tipo de LEGO</th>
+                             <th>Post</th>
+                             <th>Votos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Castillo Medieval</td>
+                            <td>Miau23</td>
+                            <td>Clásico</td>
+                            <td><a href="img/castillo.jpg" target="_blank">Link</a></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Vehículo Espacial</td>
+                            <td>Juan</td>
+                            <td>Star Wars</td>
+                            <td><a href="img/nave.jpg" target="_blank">Link</a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                           <td>Robot Futurista</td>
+                            <td>Laura</td>
+                            <td>MOC</td>
+                            <td><a href="img/robot.jpg" target="_blank">Link</a></td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+
+            </section>
+
+            <section id="comparte" class="content">
+                <h2>COMPARTE TU CONSTRUCCIÓN LEGO</h2>
+                <p>¿Has creado algo increíble? ¡Compártelo con la comunidad BRICK-SHARE!</p>
+                <p>Sube fotos de tus MOCs, sets personalizados o construcciones únicas.</p>
+                
+                <div class="formulario-creacion">
+                    <h3>SUBE TU CONSTRUCCIÓN LEGO</h3>
+                    <form id="formularioCreacion" onsubmit="enviarFormulario(event)">
+                        <div class="campo-formulario">
+                            <label for="nombre">Constructor <span class="requerido">*</span></label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o alias">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="email">Email <span class="requerido">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="titulo">Título de tu construcción <span class="requerido">*</span></label>
+                            <input type="text" id="titulo" name="titulo" required placeholder="Ej: Castillo Medieval MOC">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="categoria">Categoría</label>
+                            <select id="categoria" name="categoria">
+                                <option value="arquitectura">Arquitectura</option>
+                                <option value="vehiculos">Vehículos</option>
+                                <option value="starwars">Star Wars</option>
+                                <option value="tecnicas">Técnicas</option>
+                                <option value="esculturas">Esculturas</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="descripcion">Descripción de tu construcción</label>
+                            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu construcción, técnicas utilizadas, piezas especiales..."></textarea>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="archivo">Subir fotos <span class="requerido">*</span></label>
+                            <input type="file" id="archivo" name="archivo" accept=".png,.jpg,.jpeg" multiple required>
+                            <small>Formatos aceptados: PNG, JPG (máx. 10MB por imagen)</small>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">Acepto compartir mi creación con la comunidad <span class="requerido">*</span></label>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">ENVIAR CONSTRUCCIÓN</button>
+
+                    </form>
+                </div>
+            </section>
+            <section id="contacta" class="content">
+                <h2>CONTACTA CON NOSOTROS</h2>
+                <p>Utiliza este formulario para contactar con el equipo de Brick-Share.</p>
+                <div class="campo-formulario">  
+                    <form id="contact-form" class="contact-form">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required>
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>  
+
+            </section>
+        </main>
+    </div>
+<!------------------------------------------------------------------------------------------>
+
+
+
+<!-------------------PIE DE PAGINA------------------------>
+    <footer>
+    <p>© 2025 Brick-Share. Todos los derechos reservados.</p>
+    <nav class="footer-links">
+        <a href="aviso-legal.html">Aviso legal</a> |
+        <a href="privacidad.html">Política de privacidad</a> |
+        <a href="terminos.html">Términos y condiciones</a>
+    </nav>
+</footer>
+<!----------------------------------------------------------->
+
+
+
+<!----------SCRIPT PARA CORREOS FORMULARIO CONTACTO--------------->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init('service_irpkka5');
+</script>
+
+<!---------------------------SCRIPT------------------------------>
+<script src="proyecto.js"></script>
+</body>
+
+</html>

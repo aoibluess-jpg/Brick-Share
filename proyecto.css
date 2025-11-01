@@ -1,0 +1,506 @@
+/*-----------------BODY Y HEADER-----------------*/
+        body {
+            background-color: rgb(254, 251, 231);
+            margin: 0;
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: #FF0000; /* Rojo LEGO */
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+ /*----------------------------------------------------------/*
+
+
+/*------------------MODO DIA-NOCHE--------------------*/
+        .luna-container button{
+            font-family: 'Silkscreen', sans-serif;
+            color: #FF0000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); ;
+        }
+        .luna-container{
+            text-align: right;
+            padding: 6px;
+        }
+  /*----------------------------------------------------------/*
+
+  
+ /*------------------LOGO, MUÑECO, TITULO WEB----------------*/
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header img.logo {
+            width: 200px;
+            height: auto;
+        }
+
+        .muñeco-container {
+            position: absolute;
+            top: 0px; /* Ligeramente arriba */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            opacity: 1.0; /* Transparencia */
+        }
+
+        .muñeco-container img { /*Las especificaciones de la imagen*/
+            height: 120px;
+            width: auto;
+            max-width: 300px;
+            object-fit: contain;
+        }
+
+        .site-titulo {
+            position: relative;
+            z-index: 2;
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 42px;
+            color: #FFD700; /* Amarillo LEGO */
+            text-shadow: 3px 3px 0 #000;
+            text-align: center;
+            margin: 0;
+            padding: 0 20px;
+        }
+ /*----------------------------------------------------------/*
+
+
+ /*------------------BOTÓN MENÚ Y SIDEBAR-------------------*/
+        .menu-control-container { /*Container donde está el botón*/
+            background-color: rgb(254, 251, 231);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .menu-control { /*Estilo del botón*/
+            background-color: white;
+            border: 2px solid #FF0000;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #FF0000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 16px;
+        }
+
+        .menu-control:hover { /* Cambio colores botón mostrar menú al pasar el ratón por él*/
+            background-color: #FF0000;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .container { /* ESTE CONTAINER DIV CONTIENE EL SIDEBAR Y EL MAIN (DONDE ESTÁN LAS SECCIONES)*/
+            display: flex;
+            flex: 1;
+            flex-direction:row;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #FFD700; /* Amarillo LEGO */
+            padding: 20px;
+            box-sizing: border-box;
+            gap: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            display: none; /*Empieza invisible*/
+        }
+
+        .sidebar.visible {
+            display: flex; /*Cuando se hace visible se ordena en flex*/
+            flex-direction: column;
+        }
+
+        .sidebar button {
+            background-color: white;
+            border: 2px solid #FF0000;
+            border-radius: 10px;
+            padding: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #333;
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 16px;
+        }
+
+        .sidebar button:hover {
+            background-color: #FF0000;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .main-content {
+            flex: 1; /* ocupa todo el espacio disponible */
+            min-width: 300px;
+        }
+
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            display: none;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+
+        .content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn { /* ANIMACION PARA QUE SE APAREZCA LA SECCION MAS SUAVE*/
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #FF0000;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+            font-size: 18px;
+            font-family: 'Silkscreen', sans-serif;
+        }
+
+
+/* ------------------ESTILOS DEL FORMULARIO------------------ */
+        .formulario-creacion {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            border: 2px solid #FFD700;
+        }
+
+        .campo-formulario {
+            margin-bottom: 20px; /* espacio para que el botón no choque con el footer */
+        }
+
+        .campo-formulario label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #FF0000;
+        }
+
+        .campo-formulario input,
+        .campo-formulario textarea,
+        .campo-formulario select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .campo-formulario input:focus,
+        .campo-formulario textarea:focus,
+        .campo-formulario select:focus {
+            outline: none;
+            border-color: #FF0000;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+
+
+        /* ESTILO ESPECÍFICO PARA EL CHECKBOX */
+        #terminos {
+            width: auto !important;
+            display: inline !important;
+            margin-right: 8px;
+        }
+
+        #terminos + label {
+            display: inline !important;
+            font-weight: normal;
+        }
+
+        .btn-enviar {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-bottom: 100px;
+        }
+
+        .btn-enviar:hover {
+            background-color: #CC0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .requerido {
+            color: red;
+        }
+
+
+        footer {
+            background-color: #FF0000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-family: 'Silkscreen', sans-serif;
+            font-size: 14px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            position:fixed;
+            bottom:0;
+            left:0;
+            width: 100%;
+        }
+
+        .footer-links a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer-links a:hover {
+             text-decoration: underline;
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 20px 0;
+            }
+            
+            .site-title {
+              font-size: 28px;
+              margin-top: 15px;
+               order: 2;
+            }
+            
+            .logo-container {
+              order: 1;
+            }
+            
+             .container {
+               flex-direction: column;
+             height: auto;
+            }
+            
+            .sidebar {
+                width: 100%;
+              flex-direction: row;
+               flex-wrap: wrap;
+               justify-content: center;
+             }
+            
+            .sidebar button {
+                flex: 1;
+                min-width: 150px;
+                font-size: 14px;
+            }
+            
+            .menu-control-container {
+                padding: 15px;
+                justify-content: center;
+            }
+            
+            .menu-control {
+                font-size: 14px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+             p {
+              font-size: 16px;
+             }
+        }
+
+/* ----------------CSS DE LA TABLA----------------------*/
+.tabla-creaciones {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombrita */
+}
+
+.tabla-creaciones th,
+.tabla-creaciones td {
+    border: 3px solid #FFD700;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla-creaciones th {
+    background-color: #FF0000;
+    color: white;
+}
+
+.tabla-creaciones img {
+    border-radius: 5px;
+}
+    
+
+
+/* ------------------CSS DEL MODO NOCHE------------------*/
+body.noche {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.noche header {
+  background-color: #560775;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.noche .menu-control-container {
+  background-color: #1a1a1a;
+}
+
+body.noche .menu-control {
+  background-color: #3d0364;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+}
+
+body.noche .menu-control:hover {
+  background-color: #FFD700;
+  color: #3d0364;
+}
+
+body.noche .sidebar {
+  background-color: #333;
+}
+
+body.noche .sidebar button {
+  background-color: #222;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+}
+
+body.noche .sidebar button:hover {
+  background-color: #FFD700;
+  color: #000;
+}
+
+body.noche .content {
+  background-color: #1e1e1e;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+body.noche h2 {
+  color: #FFD700;
+  border-bottom: 2px solid #FF0000;
+}
+
+body.noche p {
+  color: #ccc;
+}
+
+body.noche .luna-container button{
+            background-color: rgba(255,255,255,0.1)
+        }
+
+body.noche footer{
+    background-color: #560775;
+    color: #f1f1f1;
+}
+
+/*-------------------COOKIES----------------*/
+#aviso-cookies {
+    position: fixed;
+    bottom: 20px;
+    left: 35%;
+    align-self: center;
+    background-color: #FFD700;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Bloque de botones */
+#aviso-cookies div {
+    margin-top: 15px;
+}
+
+/* Botones */
+#aviso-cookies button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#aviso-cookies button:first-child {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#aviso-cookies button:last-child {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+/*-------------------CSS DE LA GALERIA------------------ */
+.galeria-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.galeria-flex .creacion {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.galeria-flex .creacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-flex .creacion:hover {
+    transform: scale(1.05);
+}
