@@ -185,18 +185,11 @@ function mostrarDetalles(event) {
 
 
 
-
-
-    
-
-
-
-
 /* ---------------------FUNCION MODO NOCHE-DIA----------------------*/
         function nochedia() {
             document.body.classList.toggle('noche'); //Le añadimos al body la classList "noche", y esta tiene el css cambiado
                                                      //Al poner toggle, se activará y desactivará esta clase
-             boton=document.getElementById('luna-container2')
+             boton=document.getElementById('luna-container2');
 
             if (document.body.classList.contains('noche')) { //Si la classList noche está activa...
                 boton.innerHTML='🌞 Modo día'; //...cambiamos el texto del botón
