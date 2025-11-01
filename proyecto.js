@@ -30,11 +30,14 @@ function cookiesFuera() {
 }
 document.body.appendChild(avisoCookies);
 
-/*--------------------------FUNCION INCLUYO MI LIBRARIA DE EMAILJS--------------------*/
 
-   (function(){
-      emailjs.init("nzXBSBVVCTjAl4sML"); // tu clave pública
-   })();
+
+
+/*--------------------------FUNCION INCLUYO MI LIBRERIA DE EMAILJS--------------------*/
+function initEmailJS() { 
+    emailjs.init("nzXBSBVVCTjAl4sML"); // clave publica para recibir los mails en mi cuenta de emailjs dado que no tengo un servidor propio
+}
+initEmailJS(); //Llamo a la funcion
 
 /*-------------------------FUNCION ENVIO FORMULARIO DE CONTACTO-----------------------*/
 document.addEventListener('DOMContentLoaded', function() { /*Me aseguro de que está cargado todos los elem del DOM, me daba error*/
@@ -46,7 +49,7 @@ function funcionExito() {// Defino  la funcion exito
         formularioContacto.reset();
 }
 function funcionError(error) { //Degino la funcion error
-       alert('Ha ocurrido un error: ');
+       alert('Ha ocurrido un error ');
 }
 
 formularioContacto.addEventListener('submit', function(event) { //FUNCIÓN SUBMIT
@@ -56,6 +59,8 @@ formularioContacto.addEventListener('submit', function(event) { //FUNCIÓN SUBMI
     .then(funcionExito, funcionError); // Activo las funciones ya definidas tras hacer sendForm, puede dar error o exito
      });
 });
+
+
 
 
 /* ---------------------MOSTRAR/OCULTAR EL MENÚ---------------------*/
@@ -74,6 +79,7 @@ formularioContacto.addEventListener('submit', function(event) { //FUNCIÓN SUBMI
                      }
                 }
             );
+
 
 
 
@@ -97,38 +103,94 @@ formularioContacto.addEventListener('submit', function(event) { //FUNCIÓN SUBMI
 
 
 
+
 /* ---------------------FUNCION ENVIAR FORMULARIO Y MOSTRAR LA IMAGEN EN LA GALERIA----------------------*/
-        // Función para el formulario
+let galeriaData = [];
+let i = 0;
+
 function enviarFormulario(event) {
-    event.preventDefault(); //Al entrar en la funcion enviarFormulario lo primero que hacemos es evitar que se recargue la página, quiero comprobar que funciona
+    event.preventDefault();
 
-    let nombre=document.getElementById('nombre').value;
-    let titulo=document.getElementById('titulo').value;
-    let categoria=document.getElementById('categoria').value;
-    let descripcion=document.getElementById('descripcion').value;
-    let archivoFoto=document.getElementById('archivo').files[0]; // Solo un archivo
+    let nombre = document.getElementById('nombre').value;
+    let titulo = document.getElementById('titulo').value;
+    let categoria = document.getElementById('categoria').value;
+    let descripcion = document.getElementById('descripcion').value;
+    let archivoFoto = document.getElementById('archivo').files[0];
 
-    let reader=new FileReader(); //Creamos un lector de archivos
-    reader.onload=function(event) { //event=paquete de datos del submit
-        let contenedor=document.createElement('a'); // contenedor como enlace
-        contenedor.href="#"; // aquí puedes enlazar a info individual
+    let reader = new FileReader();
+    reader.onload = function(event) {
+        let contenedor = document.createElement('a');
+        contenedor.href = "#";
         contenedor.classList.add('creacion');
 
-        let img=document.createElement('img'); //Creo un elemento imagen sin nada
-        img.src=event.target.result; //Dicha imagen es el resultado del event target
-        img.alt=titulo;
+        let img = document.createElement('img');
+        img.src = event.target.result;
+        img.alt = titulo;
+        img.id = i; // Le doy a la imagen un ID, que va a coincidir con el ID de los datos galeriaData
+        img.className = 'imagenGaleria';
 
-        contenedor.appendChild(img); //La imagen es hija del contenedor-enlace que hemos creado
-        document.getElementById('contenedor-galeria').appendChild(contenedor); //El contenedor-enlace es hijo de nuestro contenedor real en el html
+        galeriaData.push({
+            id: i,
+            nombre,
+            titulo,
+            categoria,
+            descripcion,
+            imagen: img.src
+        });
+
+        contenedor.appendChild(img);
+        document.getElementById('contenedor-galeria').appendChild(contenedor);
+        img.onclick = mostrarDetalles;
+
+        i++;
     };
 
-    reader.readAsDataURL(archivoFoto); //Lee el archivo como un url
-
+    reader.readAsDataURL(archivoFoto);
     alert('¡Gracias por compartir tu construcción LEGO!');
     document.getElementById('formularioCreacion').reset();
 }
 
+/*----------------------FUNCION DESPLIEGO UNA IMAGEN DE LA GALERIA-----------------------------*/
+function mostrarDetalles(event) { 
+    const idImagen=this.id; //La id de la imagen original, cuyo click es el evento
+    data=null;
+    for(let i=0;i<galeriaData.length;i++){
+         if (galeriaData[i].id == idImagen) {  // si el id coincide
+            data = galeriaData[i];             // guardamos el objeto en data
+            break;                   // salimos del bucle
+        }
+    }
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    overlay.style.display = 'flex'; // <--- clave
+
+    const detalle = document.createElement('div');
+    detalle.classList.add('detalle');
+    detalle.innerHTML = `
+        <img src="${data.imagen}" alt="${data.titulo}">
+        <h2>${data.titulo}</h2>
+        <p><strong>Autor:</strong> ${data.nombre}</p>
+        <p><strong>Categoría:</strong> ${data.categoria}</p>
+        <p><strong>Descripción:</strong> ${data.descripcion}</p>
+    `;
+    overlay.appendChild(detalle); //DETALLE (div) es hijo de OVERLAY (otro div)
+    document.body.appendChild(overlay); //OVERLAY es hijo del BODY
+
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) overlay.remove();
+    });
+}
+
+
+
+
+
+
     
+
+
+
 
 /* ---------------------FUNCION MODO NOCHE-DIA----------------------*/
         function nochedia() {
