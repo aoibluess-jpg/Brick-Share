@@ -155,15 +155,15 @@ function mostrarDetalles(event) {
     const idImagen=this.id; //La id de la imagen original, cuyo click es el evento
     data=null;
     for(let i=0;i<galeriaData.length;i++){
-         if (galeriaData[i].id == idImagen) {  // si el id coincide
-            data = galeriaData[i];             // guardamos el objeto en data
+         if (galeriaData[i].id == idImagen) {  // si el id coincide...
+            data = galeriaData[i];             // ...guardamos el objeto en data
             break;                   // salimos del bucle
         }
     }
 
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
-    overlay.style.display = 'flex'; // <--- clave
+    overlay.style.display = 'flex';
 
     const detalle = document.createElement('div');
     detalle.classList.add('detalle');

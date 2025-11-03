@@ -21,9 +21,17 @@
 
 /*------------------MODO DIA-NOCHE--------------------*/
         .luna-container button{
+            background-color: white;
             font-family: 'Silkscreen', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 12px 20px;
             color: #FF0000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); ;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 16px;
         }
         .luna-container{
             text-align: right;
@@ -468,6 +476,12 @@ body.noche option{
 body.noche select{
     background-color: #FFD700;
     color:#000;
+}
+body.noche .detalle {
+    background-color: rgba(0,0,0,0.8);
+}
+body.noche .creacion{
+    background-color: rgba(0,0,0,0.8);
 }
 
 /*-------------------COOKIES----------------*/
