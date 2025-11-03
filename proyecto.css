@@ -186,6 +186,8 @@
             font-family: 'Silkscreen', sans-serif;
         }
 
+        
+
 
 /* ------------------ESTILOS DEL FORMULARIO------------------ */
         .formulario-creacion {
@@ -273,7 +275,7 @@
             font-family: 'Silkscreen', sans-serif;
             font-size: 14px;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-            position:fixed;
+            position:static;
             bottom:0;
             left:0;
             width: 100%;
@@ -343,6 +345,10 @@
              }
         }
 
+        
+
+        
+
 /* ----------------CSS DE LA TABLA----------------------*/
 .tabla-creaciones {
     width: 100%;
@@ -411,9 +417,9 @@ body.noche .sidebar button:hover {
 }
 
 body.noche .content {
-  background-color: #1e1e1e;
+  background-color: #560775;
   color: #ddd;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  
 }
 
 body.noche h2 {
@@ -426,12 +432,38 @@ body.noche p {
 }
 
 body.noche .luna-container button{
-            background-color: rgba(255,255,255,0.1)
-        }
+    background-color: rgba(255,255,255,0.1);
+}
 
 body.noche footer{
     background-color: #560775;
     color: #f1f1f1;
+}
+
+body.noche div.formulario-creacion{
+    background-color: #560775;
+}
+body.noche section#contacta{
+    background-color: ;
+}
+
+body.noche input{
+    background-color: #FFD700;
+    color:#000;
+}
+
+body.noche textarea{
+    background-color: #FFD700;
+    color:#000;
+}
+
+body.noche option{
+    background-color: #FFD700;
+    color:#000;
+}
+body.noche select{
+    background-color: #FFD700;
+    color:#000;
 }
 
 /*-------------------COOKIES----------------*/
