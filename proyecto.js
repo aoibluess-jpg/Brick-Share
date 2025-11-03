@@ -44,19 +44,19 @@ document.addEventListener('DOMContentLoaded', function() { /*Me aseguro de que e
   const formularioContacto = document.getElementById('contact-form'); /*Localizo el formulario*/
 
 
-function funcionExito() {// Defino  la funcion exito
+    function funcionExito() {// Defino  la funcion exito
          alert('Correo enviado correctamente!');
         formularioContacto.reset();
-}
-function funcionError(error) { //Degino la funcion error
+    }
+    function funcionError(error) { //Degino la funcion error
        alert('Ha ocurrido un error ');
-}
+    }
 
-formularioContacto.addEventListener('submit', function(event) { //FUNCIÓN SUBMIT
-    event.preventDefault(); // Evito que se recargue la página al hacer el evento submit
+    formularioContacto.addEventListener('submit', function(event) { //FUNCIÓN SUBMIT
+        event.preventDefault(); // Evito que se recargue la página al hacer el evento submit
 
-    emailjs.sendForm('service_irpkka5', 'template_4hxp0jd', formularioContacto) //ESTA FRASE ES LA QUE ENVÍA EL FORMULARIO
-    .then(funcionExito, funcionError); // Activo las funciones ya definidas tras hacer sendForm, puede dar error o exito
+        emailjs.sendForm('service_irpkka5', 'template_4hxp0jd', formularioContacto) //ESTA FRASE ES LA QUE ENVÍA EL FORMULARIO
+        .then(funcionExito, funcionError); // Activo las funciones ya definidas tras hacer sendForm, puede dar error o exito
      });
 });
 
@@ -89,7 +89,7 @@ formularioContacto.addEventListener('submit', function(event) { //FUNCIÓN SUBMI
         function mostrarSeccion(seccion) { 
             let secciones=document.getElementsByClassName('content');
             for (let i=0; i<secciones.length; i++) { //Recorro todas las secciones...
-                secciones[i].classList.remove('active'); //..y las pongo inactivas todas
+                secciones[i].classList.remove('active'); //..y las pongo inactivas todas para que no se vean
             }
            
             document.getElementById(seccion).classList.add('active'); //Muestro solo la elegida, el parametro es = al id
