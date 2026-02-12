@@ -256,4 +256,14 @@ body.noche .formulario-creacion { background-color: #560775 !important; }
         padding: 8px 20px;  
         font-size: 11px;    
     }
+
+     .content {
+        padding: 20px 15px !important;
+        margin: 15px 10px !important;
+    }
+    
+    .container, .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
 }
