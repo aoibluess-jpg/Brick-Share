@@ -111,7 +111,7 @@ body {
     padding: 10px;
 }
 
-/*------------GALERIA-------------*/
+/*------------GALERIA-------------*/ /* QUITO TODO ESTO PORQUE IMPLEMENTO BOOTSTRAP
 .galeria-flex .creacion {
     width: 150px;
     height: 150px;
@@ -119,9 +119,42 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
-@media (max-width: 576px) {
-    .galeria-flex .creacion { width: calc(50% - 10px); height: auto; aspect-ratio: 1/1; }
+
+.galeria-flex .creacion img { /*Mejoro esto, las imagenes del overlay tienen tamaño maximo*/ /*
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
 }
+/
+
+/*--------GALERÍA BOOTSTRAP--------*/
+#contenedor-galeria .creacion {
+    display: block;
+    width: 30%;
+    height: 30%;
+    aspect-ratio: 1/1;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#contenedor-galeria .creacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contenedor-galeria .creacion:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+#contenedor-galeria .col { /*He anulado la forma de mostrar con bootstrap la galeria*/
+    flex: 0 0 auto;        
+    width: auto;          
+}
+
 
 /*------------ OVERLAY -------------*/
 .overlay {
@@ -139,6 +172,14 @@ body {
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
+}
+
+.detalle img { /*Mejoro esto, las imagenes del overlay tienen tamaño maximo*/
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 /*-------------- COOKIES ------------*/

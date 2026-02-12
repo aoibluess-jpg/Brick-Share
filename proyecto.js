@@ -1,4 +1,5 @@
 
+
 /* ---------------------COOKIES---------------------*/
 const avisoCookies = document.createElement('div');
 avisoCookies.id = 'aviso-cookies';
@@ -127,7 +128,8 @@ function enviarFormulario(event) {
         img.src = event.target.result;
         img.alt = titulo;
         img.id = i; // Le doy a la imagen un ID, que va a coincidir con el ID de los datos galeriaData
-        img.className = 'imagenGaleria';
+        img.className = 'w-100 h-100'; //Bootstrap
+        img.style.objectFit = 'cover'; //mejora
 
         galeriaData.push({
             id: i,
