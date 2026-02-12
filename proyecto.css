@@ -216,6 +216,7 @@ body.noche .formulario-creacion { background-color: #560775 !important; }
     display: block !important;
 }
 
+
 /* ANULO EL GRID DE BOOTSTRAP EN SIDEBAR Y MAIN */
 .sidebar.col-lg-3,
 .sidebar.col-md-4 {
