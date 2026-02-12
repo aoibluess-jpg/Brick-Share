@@ -241,8 +241,8 @@ body.noche .formulario-creacion { background-color: #560775 !important; }
     h2 { font-size: 22px !important; }
     .luna-container button { 
         width: auto;       
-        padding: 6px 15px;  
-        font-size: 11px;    
+        padding: 4px 12px;  
+        font-size: 10px;    
     }
 
     .content {
