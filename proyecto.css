@@ -234,9 +234,9 @@ body.noche .formulario-creacion { background-color: #560775 !important; }
 
 /*------------ MEJORAS PARA MOVILES------------ */
 @media (max-width: 768px) {
-    .site-titulo { font-size: 32px !important; }
+    .site-titulo { font-size: 36px !important; }
     .muñeco-container img { height: 100px !important; }
-    .muñeco-container { top: -35px !important; }
+    .muñeco-container { top: -25px !important; }
     .content p, .content li { font-size: 15px !important; }
     h2 { font-size: 22px !important; }
     .luna-container button { 
