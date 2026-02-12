@@ -1,578 +1,129 @@
-/*-----------------BODY Y HEADER-----------------*/
 
-        body {
-            background-color: rgb(254, 251, 231);
-            margin: 0;
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            height: 100%;
-            display:flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #FF0000; /* Rojo LEGO */
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
- /*----------------------------------------------------------/*
-
-
-/*------------------MODO DIA-NOCHE--------------------*/
-        .luna-container button{
-            background-color: white;
-            font-family: 'Silkscreen', sans-serif;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 8px;
-            padding: 12px 20px;
-            color: #FF0000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-size: 16px;
-        }
-        .luna-container{
-            text-align: right;
-            padding: 6px;
-        }
-  /*----------------------------------------------------------/*
-
-  
- /*------------------LOGO, MUÑECO, TITULO WEB----------------*/
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .muñeco-container {
-            position: absolute;
-            top: -60px; /* Ligeramente arriba */
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-            opacity: 1.0; /* Transparencia */
-        }
-
-        .muñeco-container img { /*Las especificaciones de la imagen*/
-            height: 120px;
-            width: auto;
-            max-width: 300px;
-            object-fit: contain;
-        }
-
-        .titulo-container {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .site-titulo {
-            position: relative;
-            z-index: 2;
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 42px;
-            color: #FFD700; /* Amarillo LEGO */
-            text-shadow: 3px 3px 0 #000;
-            text-align: center;
-            margin: 0;
-            padding: 0 20px;
-        }
- /*----------------------------------------------------------/*
-
-
- /*------------------BOTÓN MENÚ Y SIDEBAR-------------------*/
-        .menu-control-container { /*Container donde está el botón*/
-            background-color: rgb(254, 251, 231);
-            padding: 15px 30px;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .menu-control { /*Estilo del botón*/
-            background-color: white;
-            border: 2px solid #FF0000;
-            border-radius: 8px;
-            padding: 12px 20px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #FF0000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 16px;
-        }
-
-        .menu-control:hover { /* Cambio colores botón mostrar menú al pasar el ratón por él*/
-            background-color: #FF0000;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-
-        .container { /* ESTE CONTAINER DIV CONTIENE EL SIDEBAR Y EL MAIN (DONDE ESTÁN LAS SECCIONES)*/
-            display: flex;
-            flex: 1;
-            flex-direction:row;
-
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: #FFD700; /* Amarillo LEGO */
-            padding: 20px;
-            box-sizing: border-box;
-            gap: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-            display: none; /*Empieza invisible*/
-        }
-
-        .sidebar.visible {
-            display: flex; /*Cuando se hace visible se ordena en flex*/
-            flex-direction: column;
-        }
-
-        .sidebar button {
-            background-color: white;
-            border: 2px solid #FF0000;
-            border-radius: 10px;
-            padding: 12px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s;
-            color: #333;
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 16px;
-        }
-
-        .sidebar button:hover {
-            background-color: #FF0000;
-            color: white;
-            transform: translateX(5px);
-        }
-
-        .main-content {
-            flex: 1; /* ocupa todo el espacio disponible */
-            min-width: 300px;
-        }
-
-
-        .content {
-            flex: 1;
-            padding: 40px;
-            display: none;
-            background-color: white;
-            margin: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.05);
-        }
-
-        .content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn { /* ANIMACION PARA QUE SE APAREZCA LA SECCION MAS SUAVE*/
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 {
-            color: #FF0000;
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #555;
-            font-size: 18px;
-            font-family: 'Silkscreen', sans-serif;
-        }
-
-        section{
-            border: 3px solid #FF0000;
-        }
-        
-
-
-/* ------------------ESTILOS DEL FORMULARIO------------------ */
-        .formulario-creacion {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f8f8f8;
-            border-radius: 10px;
-            border: 2px solid #FFD700;
-        }
-
-        .campo-formulario {
-            margin-bottom: 20px; /* espacio para que el botón no choque con el footer */
-        }
-
-        .campo-formulario label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #FF0000;
-        }
-
-        .campo-formulario input,
-        .campo-formulario textarea,
-        .campo-formulario select {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #FFD700;
-            border-radius: 5px;
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-
-        .campo-formulario input:focus,
-        .campo-formulario textarea:focus,
-        .campo-formulario select:focus {
-            outline: none;
-            border-color: #FF0000;
-            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-        }
-
-
-        /* ESTILO ESPECÍFICO PARA EL CHECKBOX */
-        #terminos {
-            width: auto !important;
-            display: inline !important;
-            margin-right: 8px;
-        }
-
-        #terminos + label {
-            display: inline !important;
-            font-weight: normal;
-        }
-
-        .btn-enviar {
-            background-color: #FF0000;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 16px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin-bottom: 100px;
-        }
-
-        .btn-enviar:hover {
-            background-color: #CC0000;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .requerido {
-            color: red;
-        }
-
-
-        footer {
-            background-color: #FF0000;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-family: 'Silkscreen', sans-serif;
-            font-size: 14px;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-            bottom:0;
-            left:0;
-            width: 100%;
-            position: static;
-            bottom: 0;
-            left: 0;
-        }
-
-        .footer-links a {
-            color: #FFD700;
-            text-decoration: none;
-            margin: 0 8px;
-        }
-
-        .footer-links a:hover {
-             text-decoration: underline;
-        }
-
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                height: auto;
-                padding: 20px 0;
-            }
-            
-            .site-title {
-              font-size: 28px;
-              margin-top: 15px;
-               order: 2;
-            }
-            
-            .logo-container {
-              order: 1;
-            }
-            
-             .container {
-                flex-direction: column;
-                height: auto;
-            }
-            
-            .sidebar {
-                width: 100%;
-              flex-direction: row;
-               flex-wrap: wrap;
-               justify-content: center;
-             }
-            
-
-             .sidebar button {
-                flex: 1;
-                min-width: 150px;
-                font-size: 14px;
-            }
-            
-            .menu-control-container {
-                padding: 15px;
-                justify-content: center;
-            }
-            
-            .menu-control {
-                font-size: 14px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
-            
-             p {
-              font-size: 16px;
-             }
-        }
-
-        
-
-        
-
-/* ----------------CSS DE LA TABLA----------------------*/
-.tabla-creaciones {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombrita */
+/* --------BODY ---------- */
+body {
+    font-family: 'Silkscreen', sans-serif;
+    background-color: #fefbe7;
 }
 
-.tabla-creaciones th,
-.tabla-creaciones td {
-    border: 3px solid #FFD700;
-    padding: 10px;
-    text-align: center;
+/* -------- COLOR ROJO LEGO-------------- */
+.bg-lego-red {
+    background-color: #FF0000 !important;
 }
 
-.tabla-creaciones th {
-    background-color: #FF0000;
-    color: white;
+/*----------TU COLOR AMARILLO LEGO-------------*/
+.bg-lego-yellow {
+    background-color: #FFD700 !important;
+}
+.text-lego-yellow {
+    color: #FFD700 !important;
 }
 
-.tabla-creaciones img {
-    border-radius: 5px;
+/*---------TÍTULO CON SOMBRA----------- */
+.site-titulo {
+    text-shadow: 3px 3px 0 #000;
+    font-size: 42px;
+    z-index:2;
 }
-    
-
-
-/* ------------------CSS DEL MODO NOCHE------------------*/
-body.noche {
-  background-color: #121212;
-  color: #f1f1f1;
+@media (max-width: 768px) {
+    .site-titulo { font-size: 28px; }
 }
 
-body.noche header {
-  background-color: #560775;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+/* -----------MUÑECO -----------*/
+.muñeco-container {
+    top: -20px !important;
+    z-index: 0; 
+}
+.muñeco-container img {
+    height: 95px;
+    width: auto;
+}
+@media (max-width: 768px) {
+    .muñeco-container img { height: 80px; }
+    .muñeco-container { top: -40px !important; }
 }
 
-body.noche .menu-control-container {
-  background-color: #1a1a1a;
+/* ----------BOTÓN MOSTRAR MENÚ---------- */
+.menu-control {
+    border: 2px solid #FF0000 !important;
+    color: #FF0000 !important;
+}
+.menu-control:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
 }
 
-body.noche .menu-control {
-  background-color: #3d0364;
-  color: #FFD700;
-  border: 2px solid #FFD700;
+/*--------------SIDEBAR OCULTO POR DEFECTO -------------*/
+#sidebar {
+    display: none !important;
+}
+#sidebar.visible {
+    display: block !important;
 }
 
-body.noche .menu-control:hover {
-  background-color: #FFD700;
-  color: #3d0364;
-}
-
-body.noche .sidebar {
-  background-color: #333;
-}
-
-body.noche .sidebar button {
-  background-color: #222;
-  color: #FFD700;
-  border: 2px solid #FFD700;
-}
-
-body.noche .sidebar button:hover {
-  background-color: #FFD700;
-  color: #000;
-}
-
-body.noche .content {
-  background-color: #560775;
-  color: #ddd;
-  
-}
-
-body.noche h2 {
-  color: #FFD700;
-  border-bottom: 2px solid #FF0000;
-}
-
-body.noche p {
-  color: #ccc;
-}
-
-body.noche .luna-container button{
-    background-color: rgba(255,255,255,0.1);
-}
-
-body.noche footer{
-    background-color: #560775;
-    color: #f1f1f1;
-}
-
-body.noche div.formulario-creacion{
-    background-color: #560775;
-}
-body.noche section#contacta{
-    background-color: ;
-}
-
-body.noche input{
-    background-color: #FFD700;
-    color:#000;
-}
-
-body.noche textarea{
-    background-color: #FFD700;
-    color:#000;
-}
-
-body.noche option{
-    background-color: #FFD700;
-    color:#000;
-}
-body.noche select{
-    background-color: #FFD700;
-    color:#000;
-}
-body.noche .detalle {
-    background-color: rgba(0,0,0,0.8);
-}
-body.noche .creacion{
-    background-color: rgba(0,0,0,0.8);
-}
-
-/*-------------------COOKIES----------------*/
-#aviso-cookies {
-    position: fixed;
-    bottom: 20px;
-    left: 35%;
-    align-self: center;
-    background-color: #FFD700;
-    color: #fff;
-    padding: 20px 30px;
+/*----------BOTONES DEL SIDEBAR----------- */
+.sidebar button {
+    background-color: white;
+    border: 2px solid #FF0000 !important;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    max-width: 400px;
-    text-align: center;
-    z-index: 1000;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-family: 'Silkscreen', sans-serif;
+}
+.sidebar button:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
 }
 
-/* Bloque de botones */
-#aviso-cookies div {
-    margin-top: 15px;
+/*-----------TARJ DE CONTENIDO------------*/
+.content {
+    background-color: white;
+    border: 3px solid #FF0000 !important;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+}
+@media (max-width: 768px) {
+    .content { padding: 20px; margin: 20px; }
 }
 
-/* Botones */
-#aviso-cookies button {
-    padding: 8px 15px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+/*-------------- BOTONES ROJOS------------ */
+.btn-lego {
+    background-color: #FF0000 !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    border-radius: 5px !important;
+    font-family: 'Silkscreen', sans-serif !important;
+}
+.btn-lego:hover {
+    background-color: #CC0000 !important;
 }
 
-#aviso-cookies button:first-child {
-    background-color: #4CAF50;
-    color: white;
+/*---------TABLA---------- */
+.tabla-creaciones th {
+    background-color: #FF0000 !important;
+    color: white !important;
+}
+.tabla-creaciones td,
+.tabla-creaciones th {
+    border: 3px solid #FFD700 !important;
+    padding: 10px;
 }
 
-#aviso-cookies button:last-child {
-    background-color: #f44336;
-    color: white;
-}
-
-#aviso-cookies P{
-    color:rgb(0, 0, 0);
-}
-
-
-
-/*-------------------CSS DE LA GALERIA------------------ */
-.galeria-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: flex-start;
-}
-
+/*------------GALERIA-------------*/
 .galeria-flex .creacion {
     width: 150px;
     height: 150px;
-    overflow: hidden;
     border: 2px solid #FFD700;
     border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s;
+    overflow: hidden;
+}
+@media (max-width: 576px) {
+    .galeria-flex .creacion { width: calc(50% - 10px); height: auto; aspect-ratio: 1/1; }
 }
 
-.galeria-flex .creacion img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.galeria-flex .creacion:hover {
-    transform: scale(1.05);
-}
-
-
-/*--------------- DESPLIEGUE DE IMAGEN DE GALERIA-OVERLAY-------------*/
+/*------------ OVERLAY -------------*/
 .overlay {
     position: fixed;
     top: 0; left: 0;
@@ -583,12 +134,88 @@ body.noche .creacion{
     align-items: center;
     z-index: 1000;
 }
-
 .detalle {
     background: white;
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
+}
+
+/*-------------- COOKIES ------------*/
+#aviso-cookies {
+    position: fixed;
+    bottom: 20px;
+    left: 35%;
+    background-color: #FFD700;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
+@media (max-width: 768px) {
+    #aviso-cookies { left: 5%; right: 5%; width: 90%; max-width: none; }
+}
+
+/* ---------MODO NOCHE ----------- */
+body.noche { background-color: #121212 !important; }
+body.noche header { background-color: #560775 !important; }
+body.noche .content { background-color: #560775 !important; border-color: #FFD700 !important; }
+body.noche .sidebar { background-color: #333 !important; }
+body.noche .sidebar button { background-color: #222 !important; color: #FFD700 !important; border-color: #FFD700 !important; }
+body.noche footer { background-color: #560775 !important; }
+body.noche .formulario-creacion { background-color: #560775 !important; }
+
+/*------------------- ME ASEGURO DE QUE LAS SECCIONES Y SIDEBAR MANTENTAN FORMATO-----------------*/
+/* FUERA BOOTSTRAP */
+.sidebar {
+    display: none !important;
+}
+.sidebar.visible {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.main-content {
+    display: block !important;
+    width: 100% !important;
+}
+
+.content {
+    display: none !important;
+}
+.content.active {
+    display: block !important;
+}
+
+/* ANULO EL GRID DE BOOTSTRAP EN SIDEBAR Y MAIN */
+.sidebar.col-lg-3,
+.sidebar.col-md-4 {
+    width: 250px !important;
+    flex: 0 0 250px !important;
+    max-width: 250px !important;
+}
+
+.main-content.col-lg-9,
+.main-content.col-md-8 {
+    width: calc(100% - 250px) !important;
+    flex: 0 0 calc(100% - 250px) !important;
+    max-width: calc(100% - 250px) !important;
+}
+
+/* EN MÓVIL, QUE OCUPEN TODO EL ANCHO */
+@media (max-width: 991px) {
+    .sidebar.col-lg-3,
+    .sidebar.col-md-4,
+    .main-content.col-lg-9,
+    .main-content.col-md-8 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
