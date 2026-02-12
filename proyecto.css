@@ -24,9 +24,6 @@ body {
     font-size: 42px;
     z-index:2;
 }
-@media (max-width: 768px) {
-    .site-titulo { font-size: 28px; }
-}
 
 /* -----------MUÑECO -----------*/
 .muñeco-container {
@@ -36,10 +33,6 @@ body {
 .muñeco-container img {
     height: 148px;
     width: auto;
-}
-@media (max-width: 768px) {
-    .muñeco-container img { height: 80px; }
-    .muñeco-container { top: -40px !important; }
 }
 
 /* ----------BOTÓN MOSTRAR MENÚ---------- */
@@ -82,9 +75,6 @@ body {
     border-radius: 10px;
     padding: 40px;
     margin: 40px;
-}
-@media (max-width: 768px) {
-    .content { padding: 20px; margin: 20px; }
 }
 
 /*-------------- BOTONES ROJOS------------ */
@@ -193,9 +183,6 @@ body {
     max-width: 400px;
     text-align: center;
     z-index: 1000;
-}
-@media (max-width: 768px) {
-    #aviso-cookies { left: 5%; right: 5%; width: 90%; max-width: none; }
 }
 
 /* ---------MODO NOCHE ----------- */
