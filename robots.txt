@@ -1,0 +1,9 @@
+# robots.txt para Brick-Share
+# Permitimos que todos los buscadores accedan a todo el sitio
+
+User-agent: *
+Allow: /
+
+# Descomenta estas líneas si tienes carpetas privadas:
+# Disallow: /admin/
+# Disallow: /privado/

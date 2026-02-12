@@ -1,0 +1,27 @@
+/*───────────── HUMANOS QUE HICIERON BRICK-SHARE ─────────────*/
+
+● EQUIPO DE DESARROLLO
+   Nombre: MARIA PAYÁ GARRIDO
+   Rol: Diseñador y desarrollador web
+   Proyecto: Brick-Share - Comunidad LEGO
+
+● TECNOLOGÍAS UTILIZADAS
+   HTML5, CSS3, JavaScript
+   Bootstrap 5.3.2
+   EmailJS
+   Fuente: Silkscreen (Google Fonts)
+
+● AGRADECIMIENTOS
+   A la comunidad LEGO por la inspiración
+   A los usuarios que comparten sus creaciones
+   Al profesor ROBERTO GONZALEZ CARDENETE por la oportunidad de este proyecto
+
+● CONTACTO
+   Web: brick-share.com
+
+● FECHA
+   Última actualización: Febrero 2026
+
+/*─────────────────────────────────────────────────────────*/
+
+
