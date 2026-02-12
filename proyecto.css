@@ -244,19 +244,16 @@ body.noche .formulario-creacion { background-color: #560775 !important; }
     max-width: calc(100% - 250px) !important;
 }
 
-/* EN MÓVIL, QUE OCUPEN TODO EL ANCHO */
-@media (max-width: 991px) {
-    .sidebar.col-lg-3,
-    .sidebar.col-md-4,
-    .main-content.col-lg-9,
-    .main-content.col-md-8 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .row {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+/*------------ MEJORAS PARA MOVILES------------ */
+@media (max-width: 768px) {
+    .site-titulo { font-size: 32px !important; }
+    .muñeco-container img { height: 100px !important; }
+    .muñeco-container { top: -35px !important; }
+    .content p, .content li { font-size: 15px !important; }
+    h2 { font-size: 22px !important; }
+    .luna-container button { 
+        width: auto;       
+        padding: 8px 20px;  
+        font-size: 14px;    
     }
 }
