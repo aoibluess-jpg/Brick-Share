@@ -45,27 +45,25 @@ body {
     color: white !important;
 }
 
+/*-------------BOTONES SIDEBAR-------------*/
+.sidebar .btn-outline-danger {
+    background-color: white !important;
+    border: 2px solid #FF0000 !important;
+    color: #FF0000 !important;
+}
+
+.sidebar .btn-outline-danger:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
+    border-color: #FF0000 !important;
+}
+
 /*--------------SIDEBAR OCULTO POR DEFECTO -------------*/
 #sidebar {
     display: none !important;
 }
 #sidebar.visible {
     display: block !important;
-}
-
-/*----------BOTONES DEL SIDEBAR----------- */
-.sidebar button {
-    background-color: white;
-    border: 2px solid #FF0000 !important;
-    border-radius: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 12px;
-    font-family: 'Silkscreen', sans-serif;
-}
-.sidebar button:hover {
-    background-color: #FF0000 !important;
-    color: white !important;
 }
 
 /*-----------TARJ DE CONTENIDO------------*/
@@ -77,18 +75,6 @@ body {
     margin: 40px;
 }
 
-/*-------------- BOTONES ROJOS------------ */
-.btn-lego {
-    background-color: #FF0000 !important;
-    color: white !important;
-    border: none !important;
-    padding: 12px 30px !important;
-    border-radius: 5px !important;
-    font-family: 'Silkscreen', sans-serif !important;
-}
-.btn-lego:hover {
-    background-color: #CC0000 !important;
-}
 
 /*---------TABLA---------- */
 .tabla-creaciones th {
