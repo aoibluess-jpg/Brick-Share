@@ -54,7 +54,7 @@
                     <button onclick="mostrarSeccion('consejos')" class="btn btn-light border-2 border-danger py-3 fw-bold">CONSEJOS LEGO</button>
                     <button onclick="mostrarSeccion('creaciones')" class="btn btn-light border-2 border-danger py-3 fw-bold">CREACIONES</button>
                     <button onclick="mostrarSeccion('comparte')" class="btn btn-light border-2 border-danger py-3 fw-bold">COMPARTE</button>
-                    <button onclick="mostrarSeccion('contacta')" class="btn btn-light border-2 border-danger py-3 fw-bold">CONTACTA</button>
+                    <button onclick="mostrarSeccion('contacta')" class="btn btn-light border-2mn border-danger py-3 fw-bold">CONTACTA</button>
                 </div>
             </nav>
 
@@ -233,6 +233,23 @@
             <a href="terminos.html" class="text-warning text-decoration-none mx-2">Términos y condiciones</a>
         </nav>
     </footer>
+
+<!----COOKIES---->
+    <div class="modal fade" id="cookiesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background-color: #FFD700; border: 3px solid #FF0000; border-radius: 10px;">
+      <div class="modal-body p-4 text-center">
+        <p class="text-dark mb-4" style="font-family: 'Silkscreen', sans-serif; font-size: 14px;">
+          Usamos cookies para mejorar tu experiencia.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <button type="button" class="btn btn-success px-4 py-2" id="aceptarCookies" style="font-family: 'Silkscreen', sans-serif;">Aceptar</button>
+          <button type="button" class="btn btn-danger px-4 py-2" id="rechazarCookies" style="font-family: 'Silkscreen', sans-serif;">Rechazar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!----------SCRIPT PARA CORREOS FORMULARIO CONTACTO--------------->
 <!---------Usaremos  emailjs para recibir los mails, 

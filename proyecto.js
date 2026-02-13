@@ -1,36 +1,21 @@
 
 
 /* ---------------------COOKIES---------------------*/
-const avisoCookies = document.createElement('div');
-avisoCookies.id = 'aviso-cookies';
-
-const parrafoCookies=document.createElement('p');
-parrafoCookies.textContent='Usamos cookies para mejorar tu experiencia.'
-avisoCookies.appendChild( parrafoCookies);
-
-const bloqueBotonesCookies=document.createElement('div');
-
-const botonAceptar=document.createElement('button');
-botonAceptar.innerHTML='Aceptar';
-botonAceptar.id = 'aceptar-cookies';
-
-const botonRechazar=document.createElement('button');
-botonRechazar.innerHTML='Rechazar';
-botonRechazar.id = 'rechazar-cookies';
-
-bloqueBotonesCookies.appendChild(botonAceptar);
-bloqueBotonesCookies.appendChild(botonRechazar);
-
-avisoCookies.appendChild(bloqueBotonesCookies);
-
-botonAceptar.onclick = cookiesFuera;
-botonRechazar.onclick = cookiesFuera;
-
-function cookiesFuera() {
-    avisoCookies.remove();
-}
-document.body.appendChild(avisoCookies);
-
+document.addEventListener('DOMContentLoaded', function() {
+    const cookiesModal = new bootstrap.Modal(document.getElementById('cookiesModal'), { //Bootstrap Modal= Objeto predefinido
+        backdrop: 'static',
+        keyboard: false
+    });
+    cookiesModal.show();
+    
+    document.getElementById('aceptarCookies').addEventListener('click', function() {
+        cookiesModal.hide();
+    });
+    
+    document.getElementById('rechazarCookies').addEventListener('click', function() {
+        cookiesModal.hide();
+    });
+});
 
 
 
@@ -152,7 +137,7 @@ function enviarFormulario(event) {
     document.getElementById('formularioCreacion').reset();
 }
 
-/*----------------------FUNCION DESPLIEGO UNA IMAGEN DE LA GALERIA-----------------------------*/
+/*----------------------FUNCION DESPLIEGO UNA IMAGEN DE LA GALERIA-----------------------------*/ //NO BOOTSTRAP//
 function mostrarDetalles(event) { 
     const idImagen=this.id; //La id de la imagen original, cuyo click es el evento
     data=null;
