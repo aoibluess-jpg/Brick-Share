@@ -137,38 +137,31 @@ function enviarFormulario(event) {
     document.getElementById('formularioCreacion').reset();
 }
 
-/*----------------------FUNCION DESPLIEGO UNA IMAGEN DE LA GALERIA-----------------------------*/ //NO BOOTSTRAP//
+/*----------------------FUNCION DESPLIEGO UNA IMAGEN DE LA GALERIA BOOTSTRAP-----------------------------*/
 function mostrarDetalles(event) { 
-    const idImagen=this.id; //La id de la imagen original, cuyo click es el evento
-    data=null;
-    for(let i=0;i<galeriaData.length;i++){
-         if (galeriaData[i].id == idImagen) {  // si el id coincide...
-            data = galeriaData[i];             // ...guardamos el objeto en data
-            break;                   // salimos del bucle
+    const idImagen = this.id;
+    let data = null;
+    
+    for(let i = 0; i < galeriaData.length; i++) {
+        if (galeriaData[i].id == idImagen) {
+            data = galeriaData[i];
+            break;
         }
     }
 
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
-    overlay.style.display = 'flex';
-
-    const detalle = document.createElement('div');
-    detalle.classList.add('detalle');
-    detalle.innerHTML = `
-        <img src="${data.imagen}" alt="${data.titulo}">
-        <h2>${data.titulo}</h2>
+    const contenido = `
+        <img src="${data.imagen}" alt="${data.titulo}" class="img-fluid mb-3" style="max-height: 400px; width: auto; margin: 0 auto; display: block;">
+        <h2 class="text-danger">${data.titulo}</h2>
         <p><strong>Autor:</strong> ${data.nombre}</p>
         <p><strong>Categoría:</strong> ${data.categoria}</p>
         <p><strong>Descripción:</strong> ${data.descripcion}</p>
     `;
-    overlay.appendChild(detalle); //DETALLE (div) es hijo de OVERLAY (otro div)
-    document.body.appendChild(overlay); //OVERLAY es hijo del BODY
-
-    overlay.addEventListener('click', (event) => {
-        if (event.target === overlay) overlay.remove();
-    });
+    
+    document.getElementById('modalDetalle').innerHTML = contenido;
+    
+    const modal = new bootstrap.Modal(document.getElementById('modalGaleria'));  //Bootstrap Modal= Objeto predefinido, igual que hemos hecho para cookies
+    modal.show();
 }
-
 
 
 
