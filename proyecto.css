@@ -127,7 +127,7 @@ body {
     font-family: 'Silkscreen', sans-serif;
 }
 
-.modal-body img {
+.modal-body img { /*Para las imagenes del overlay*/
     max-width: 100%;
     max-height: 400px;
     width: auto;

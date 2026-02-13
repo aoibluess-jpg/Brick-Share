@@ -144,49 +144,49 @@
                         <h3 class="text-danger mb-4">SUBE TU CONSTRUCCIÓN LEGO</h3>
                         <form id="formularioCreacion" onsubmit="enviarFormulario(event)">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label fw-bold text-danger">Constructor <span class="text-danger">*</span></label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o alias" class="form-control border-2 border-warning p-3">
+                                <label class="fw-bold">Constructor *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o alias" class="form-control">
                             </div>
 
                             <div class="mb-3">
-                                <label for="email" class="form-label fw-bold text-danger">Email <span class="text-danger">*</span></label>
-                                <input type="email" id="email" name="email" required class="form-control border-2 border-warning p-3">
+                                <label class="fw-bold">Email *</label>
+                                <input type="email" id="email" name="email" required class="form-control">
                             </div>
 
                             <div class="mb-3">
-                                <label for="titulo" class="form-label fw-bold text-danger">Título de tu construcción <span class="text-danger">*</span></label>
-                                <input type="text" id="titulo" name="titulo" required placeholder="Ej: Castillo Medieval MOC" class="form-control border-2 border-warning p-3">
+                                <label class="fw-bold">Título *</label>
+                                <input type="text" id="titulo" name="titulo" required placeholder="Ej: Castillo Medieval MOC" class="form-control">
                             </div>
 
                             <div class="mb-3">
-                                <label for="categoria" class="form-label fw-bold text-danger">Categoría</label>
-                                <select id="categoria" name="categoria" class="form-select border-2 border-warning p-3">
+                                <label class="fw-bold">Categoría</label>
+                                <select id="categoria" name="categoria" class="form-select">
                                     <option value="arquitectura">Arquitectura</option>
-                                    <option value="vehiculos">Vehículos</option>
-                                    <option value="starwars">Star Wars</option>
-                                    <option value="tecnicas">Técnicas</option>
-                                    <option value="esculturas">Esculturas</option>
-                                    <option value="otros">Otros</option>
+                                        <option value="vehiculos">Vehículos</option>
+                                        <option value="starwars">Star Wars</option>
+                                        <option value="tecnicas">Técnicas</option>
+                                        <option value="esculturas">Esculturas</option>
+                                        <option value="otros">Otros</option>
                                 </select>
                             </div>
 
                             <div class="mb-3">
-                                <label for="descripcion" class="form-label fw-bold text-danger">Descripción de tu construcción</label>
-                                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu construcción, técnicas utilizadas, piezas especiales..." class="form-control border-2 border-warning p-3"></textarea>
+                                <label class="fw-bold">Descripción</label>
+                                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu construcción..." class="form-control"></textarea>
                             </div>
 
                             <div class="mb-3">
-                                <label for="archivo" class="form-label fw-bold text-danger">Subir fotos <span class="text-danger">*</span></label>
-                                <input type="file" id="archivo" name="archivo" accept=".png,.jpg,.jpeg" multiple required class="form-control border-2 border-warning p-3">
-                                <small class="text-secondary">Formatos aceptados: PNG, JPG (máx. 10MB por imagen)</small>
+                                <label class="fw-bold">Fotos *</label>
+                                <input type="file" id="archivo" name="archivo" accept=".png,.jpg,.jpeg" multiple required class="form-control">
+                                <small class="text-secondary">Formatos: PNG, JPG (máx. 10MB)</small>
                             </div>
 
                             <div class="mb-3 form-check">
                                 <input type="checkbox" id="terminos" name="terminos" required class="form-check-input">
-                                <label for="terminos" class="form-check-label">Acepto compartir mi creación con la comunidad <span class="text-danger">*</span></label>
+                                <label class="form-check-label">Acepto compartir mi creación *</label>
                             </div>
 
-                            <button type="submit" class="btn btn-danger px-5 py-3 fw-bold">ENVIAR CONSTRUCCIÓN</button>
+                            <button type="submit" class="btn btn-danger px-5 py-3 fw-bold">ENVIAR CONSTRUCCIÓN</button>       
                         </form>
                     </div>
                 </section>
