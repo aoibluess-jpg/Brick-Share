@@ -1,6 +1,4 @@
-
-
-/* ---------------------COOKIES---------------------*/
+/* ---------------------COOKIES BOOTSTRAP---------------------*/
 document.addEventListener('DOMContentLoaded', function() {
     const cookiesModal = new bootstrap.Modal(document.getElementById('cookiesModal'), { //Bootstrap Modal= Objeto predefinido
         backdrop: 'static',
@@ -16,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         cookiesModal.hide();
     });
 });
-
 
 
 /*--------------------------FUNCION INCLUYO MI LIBRERIA DE EMAILJS--------------------*/
@@ -47,8 +44,6 @@ document.addEventListener('DOMContentLoaded', function() { /*Me aseguro de que e
 });
 
 
-
-
 /* ---------------------MOSTRAR/OCULTAR EL MENÚ---------------------*/
         let menuControl=document.getElementById('menuControl'); //Localizo el menu
         
@@ -65,8 +60,6 @@ document.addEventListener('DOMContentLoaded', function() { /*Me aseguro de que e
                      }
                 }
             );
-
-
 
 
 /* ---------------------MOSTRAR LA SECCION----------------------*/
