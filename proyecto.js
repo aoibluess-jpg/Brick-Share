@@ -22,6 +22,7 @@ function initEmailJS() {
 }
 initEmailJS(); //Llamo a la funcion
 
+
 /*-------------------------FUNCION ENVIO FORMULARIO DE CONTACTO-----------------------*/
 document.addEventListener('DOMContentLoaded', function() { /*Me aseguro de que está cargado todos los elem del DOM, me daba error*/
   const formularioContacto = document.getElementById('contact-form'); /*Localizo el formulario*/

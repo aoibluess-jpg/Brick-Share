@@ -48,14 +48,15 @@
     <div class="container-fluid mt-3">
         <div class="row">
             <nav class="sidebar col-lg-3 col-md-4 bg-lego-yellow p-4" id="sidebar" style="flex: 0 0 250px; width: 250px;">
-    <div class="d-flex flex-column gap-2">
-        <button onclick="mostrarSeccion('intro')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">INTRODUCCIÓN</button>
-        <button onclick="mostrarSeccion('galeria')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">GALERÍA LEGO</button>
-        <button onclick="mostrarSeccion('consejos')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">CONSEJOS LEGO</button>
-        <button onclick="mostrarSeccion('creaciones')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">CREACIONES</button>
-        <button onclick="mostrarSeccion('comparte')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">COMPARTE</button>
-        <button onclick="mostrarSeccion('contacta')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">CONTACTA</button> </div>
-</nav>
+                <div class="d-flex flex-column gap-2">
+                    <button onclick="mostrarSeccion('intro')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">INTRODUCCIÓN</button>
+                    <button onclick="mostrarSeccion('galeria')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">GALERÍA LEGO</button>
+                    <button onclick="mostrarSeccion('consejos')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">CONSEJOS LEGO</button>
+                    <button onclick="mostrarSeccion('creaciones')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">CREACIONES</button>
+                    <button onclick="mostrarSeccion('comparte')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">COMPARTE</button>
+                    <button onclick="mostrarSeccion('contacta')" class="btn btn-outline-danger w-100 mb-2 py-3 fw-bold" style="font-family: 'Silkscreen', sans-serif;">CONTACTA</button> 
+                </div>
+            </nav>
 
             <main class="main-content col-lg-9 col-md-8 p-4" style="flex: 1 1 auto; width: calc(100% - 250px);">
                 <section id="intro" class="content active p-4">
@@ -112,21 +113,21 @@
                                     <td class="p-3">Castillo Medieval</td>
                                     <td class="p-3">Miau23</td>
                                     <td class="p-3">Clásico</td>
-                                    <td class="p-3"><a href="img/castillo.jpg" target="_blank" class="text-danger fw-bold">Link</a></td>
+                                    <td class="p-3"><a href="" class="text-danger fw-bold">Link</a></td>
                                     <td class="p-3"></td>
                                 </tr>
                                 <tr>
                                     <td class="p-3">Vehículo Espacial</td>
                                     <td class="p-3">Juan</td>
                                     <td class="p-3">Star Wars</td>
-                                    <td class="p-3"><a href="img/nave.jpg" target="_blank" class="text-danger fw-bold">Link</a></td>
+                                    <td class="p-3"><a href="" target="_blank" class="text-danger fw-bold">Link</a></td>
                                     <td class="p-3"></td>
                                 </tr>
                                 <tr>
                                    <td class="p-3">Robot Futurista</td>
                                     <td class="p-3">Laura</td>
                                     <td class="p-3">MOC</td>
-                                    <td class="p-3"><a href="img/robot.jpg" target="_blank" class="text-danger fw-bold">Link</a></td>
+                                    <td class="p-3"><a href="" target="_blank" class="text-danger fw-bold">Link</a></td>
                                     <td class="p-3"></td>
                                 </tr>
                             </tbody>
@@ -234,16 +235,16 @@
     </footer>
 
 <!---- BOOTSTRAP COOKIES---->
-    <div class="modal fade" id="cookiesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+<div class="modal fade" id="cookiesModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="background-color: #FFD700; border: 3px solid #FF0000; border-radius: 10px;">
       <div class="modal-body p-4 text-center">
-        <p class="text-dark mb-4" style="font-family: 'Silkscreen', sans-serif; font-size: 14px;">
+        <p class="mb-4" style="font-family: 'Silkscreen', sans-serif; font-size: 14px; color: black;">
           Usamos cookies para mejorar tu experiencia.
         </p>
         <div class="d-flex justify-content-center gap-3">
-          <button type="button" class="btn btn-success px-4 py-2" id="aceptarCookies" style="font-family: 'Silkscreen', sans-serif;">Aceptar</button>
-          <button type="button" class="btn btn-danger px-4 py-2" id="rechazarCookies" style="font-family: 'Silkscreen', sans-serif;">Rechazar</button>
+          <button type="button" class="btn btn-success px-4 py-2" id="aceptarCookies">Aceptar</button>
+          <button type="button" class="btn btn-danger px-4 py-2" id="rechazarCookies">Rechazar</button>
         </div>
       </div>
     </div>
