@@ -101,6 +101,136 @@ body {
     padding: 10px;
 }
 
+
+/*--------GALERÍA BOOTSTRAP--------*/
+#contenedor-galeria .creacion {
+    display: block;
+    width: 30%;
+    height: 30%;
+    aspect-ratio: 1/1;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#contenedor-galeria .creacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contenedor-galeria .creacion:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+#contenedor-galeria .col { /*He anulado la forma de mostrar con bootstrap la galeria*/
+    flex: 0 0 auto;        
+    width: auto;          
+}
+/* --------BODY ---------- */
+body {
+    font-family: 'Silkscreen', sans-serif;
+    background-color: #fefbe7;
+}
+
+/* -------- COLOR ROJO LEGO-------------- */
+.bg-lego-red {
+    background-color: #FF0000 !important;
+}
+
+/*----------TU COLOR AMARILLO LEGO-------------*/
+.bg-lego-yellow {
+    background-color: #FFD700 !important;
+}
+.text-lego-yellow {
+    color: #FFD700 !important;
+}
+
+/*---------TÍTULO CON SOMBRA----------- */
+.site-titulo {
+    text-shadow: 3px 3px 0 #000;
+    font-size: 42px;
+    z-index:2;
+}
+
+/* -----------MUÑECO -----------*/
+.muñeco-container {
+    top: -50px !important;
+    z-index: 0; 
+}
+.muñeco-container img {
+    height: 148px;
+    width: auto;
+}
+
+/* ----------BOTÓN MOSTRAR MENÚ---------- */
+.menu-control {
+    border: 2px solid #FF0000 !important;
+    color: #FF0000 !important;
+}
+.menu-control:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
+}
+
+/*--------------SIDEBAR OCULTO POR DEFECTO -------------*/
+#sidebar {
+    display: none !important;
+}
+#sidebar.visible {
+    display: block !important;
+}
+
+/*----------BOTONES DEL SIDEBAR----------- */
+.sidebar button {
+    background-color: white;
+    border: 2px solid #FF0000 !important;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-family: 'Silkscreen', sans-serif;
+}
+.sidebar button:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
+}
+
+/*-----------TARJ DE CONTENIDO------------*/
+.content {
+    background-color: white;
+    border: 3px solid #FF0000 !important;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+}
+
+/*-------------- BOTONES ROJOS------------ */
+.btn-lego {
+    background-color: #FF0000 !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    border-radius: 5px !important;
+    font-family: 'Silkscreen', sans-serif !important;
+}
+.btn-lego:hover {
+    background-color: #CC0000 !important;
+}
+
+/*---------TABLA---------- */
+.tabla-creaciones th {
+    background-color: #FF0000 !important;
+    color: white !important;
+}
+.tabla-creaciones td,
+.tabla-creaciones th {
+    border: 3px solid #FFD700 !important;
+    padding: 10px;
+}
+
 /*------------GALERIA-------------*/ /* QUITO TODO ESTO PORQUE IMPLEMENTO BOOTSTRAP
 .galeria-flex .creacion {
     width: 150px;
@@ -217,7 +347,7 @@ body.noche .formulario-creacion { background-color: #560775 !important; }
 }
 
 
-/* ANULO EL GRID DE BOOTSTRAP EN SIDEBAR Y MAIN */
+/* ANULO EL GRID DE BOOTSTRAP EN SIDEBAR Y MAIN */ /*
 .sidebar.col-lg-3,
 .sidebar.col-md-4 {
     width: 250px !important;
@@ -230,7 +360,390 @@ body.noche .formulario-creacion { background-color: #560775 !important; }
     width: calc(100% - 250px) !important;
     flex: 0 0 calc(100% - 250px) !important;
     max-width: calc(100% - 250px) !important;
+} */
+
+/*------------ MEJORAS PARA MOVILES------------ */
+@media (max-width: 768px) {
+    .site-titulo { font-size: 36px !important; }
+    .muñeco-container img { height: 100px !important; }
+    .muñeco-container { top: -25px !important; }
+    .content p, .content li { font-size: 15px !important; }
+    h2 { font-size: 22px !important; }
+    .luna-container button { 
+        width: auto;       
+        padding: 4px 12px;  
+        font-size: 10px;    
+    }
+
+    .content {
+        padding: 25px 20px !important; 
+        margin: 20px 15px !important;  
+        width: auto !important;
+    }
+    
+    .container, .container-fluid {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .sidebar.col-lg-3,
+    .sidebar.col-md-4,
+    .main-content.col-lg-9,
+    .main-content.col-md-8 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .main-content {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
 }
+/* --------BODY ---------- */
+body {
+    font-family: 'Silkscreen', sans-serif;
+    background-color: #fefbe7;
+}
+
+/* -------- COLOR ROJO LEGO-------------- */
+.bg-lego-red {
+    background-color: #FF0000 !important;
+}
+
+/*----------TU COLOR AMARILLO LEGO-------------*/
+.bg-lego-yellow {
+    background-color: #FFD700 !important;
+}
+.text-lego-yellow {
+    color: #FFD700 !important;
+}
+
+/*---------TÍTULO CON SOMBRA----------- */
+.site-titulo {
+    text-shadow: 3px 3px 0 #000;
+    font-size: 42px;
+    z-index:2;
+}
+
+/* -----------MUÑECO -----------*/
+.muñeco-container {
+    top: -50px !important;
+    z-index: 0; 
+}
+.muñeco-container img {
+    height: 148px;
+    width: auto;
+}
+
+/* ----------BOTÓN MOSTRAR MENÚ---------- */
+.menu-control {
+    border: 2px solid #FF0000 !important;
+    color: #FF0000 !important;
+}
+.menu-control:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
+}
+
+/*--------------SIDEBAR OCULTO POR DEFECTO -------------*/
+#sidebar {
+    display: none !important;
+}
+#sidebar.visible {
+    display: block !important;
+}
+
+/*----------BOTONES DEL SIDEBAR----------- */
+.sidebar button {
+    background-color: white;
+    border: 2px solid #FF0000 !important;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-family: 'Silkscreen', sans-serif;
+}
+.sidebar button:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
+}
+
+/*-----------TARJ DE CONTENIDO------------*/
+.content {
+    background-color: white;
+    border: 3px solid #FF0000 !important;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+}
+
+/*-------------- BOTONES ROJOS------------ */
+.btn-lego {
+    background-color: #FF0000 !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    border-radius: 5px !important;
+    font-family: 'Silkscreen', sans-serif !important;
+}
+.btn-lego:hover {
+    background-color: #CC0000 !important;
+}
+
+/*---------TABLA---------- */
+.tabla-creaciones th {
+    background-color: #FF0000 !important;
+    color: white !important;
+}
+.tabla-creaciones td,
+.tabla-creaciones th {
+    border: 3px solid #FFD700 !important;
+    padding: 10px;
+}
+
+/*------------GALERIA-------------*/ /* QUITO TODO ESTO PORQUE IMPLEMENTO BOOTSTRAP
+.galeria-flex .creacion {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.galeria-flex .creacion img { /*Mejoro esto, las imagenes del overlay tienen tamaño maximo*/ /*
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+/
+
+/*--------GALERÍA BOOTSTRAP--------*/
+#contenedor-galeria .creacion {
+    display: block;
+    width: 30%;
+    height: 30%;
+    aspect-ratio: 1/1;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#contenedor-galeria .creacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contenedor-galeria .creacion:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+#contenedor-galeria .col { /*He anulado la forma de mostrar con bootstrap la galeria*/
+    flex: 0 0 auto;        
+    width: auto;          
+}
+
+
+/*------------ OVERLAY -------------*/
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.detalle {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.detalle img { /*Mejoro esto, las imagenes del overlay tienen tamaño maximo*/
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/*-------------- COOKIES ------------*/
+#aviso-cookies {
+    position: fixed;
+    bottom: 20px;
+    left: 35%;
+    background-color: #FFD700;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* ---------MODO NOCHE ----------- */
+body.noche { background-color: #121212 !important; }
+body.noche header { background-color: #560775 !important; }
+body.noche .content { background-color: #560775 !important; border-color: #FFD700 !important; }
+body.noche .sidebar { background-color: #333 !important; }
+body.noche .sidebar button { background-color: #222 !important; color: #FFD700 !important; border-color: #FFD700 !important; }
+body.noche footer { background-color: #560775 !important; }
+body.noche .formulario-creacion { background-color: #560775 !important; }
+
+/*------------------- ME ASEGURO DE QUE LAS SECCIONES Y SIDEBAR MANTENTAN FORMATO-----------------*/
+/* FUERA BOOTSTRAP */
+.sidebar {
+    display: none !important;
+}
+.sidebar.visible {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.main-content {
+    display: block !important;
+    width: 100% !important;
+}
+
+.content {
+    display: none !important;
+}
+.content.active {
+    display: block !important;
+}
+
+
+/* ANULO EL GRID DE BOOTSTRAP EN SIDEBAR Y MAIN */ /*
+.sidebar.col-lg-3,
+.sidebar.col-md-4 {
+    width: 250px !important;
+    flex: 0 0 250px !important;
+    max-width: 250px !important;
+}
+
+.main-content.col-lg-9,
+.main-content.col-md-8 {
+    width: calc(100% - 250px) !important;
+    flex: 0 0 calc(100% - 250px) !important;
+    max-width: calc(100% - 250px) !important;
+} */
+
+/*------------ MEJORAS PARA MOVILES------------ */
+@media (max-width: 768px) {
+    .site-titulo { font-size: 36px !important; }
+    .muñeco-container img { height: 100px !important; }
+    .muñeco-container { top: -25px !important; }
+    .content p, .content li { font-size: 15px !important; }
+    h2 { font-size: 22px !important; }
+    .luna-container button { 
+        width: auto;       
+        padding: 4px 12px;  
+        font-size: 10px;    
+    }
+
+    .content {
+        padding: 25px 20px !important; 
+        margin: 20px 15px !important;  
+        width: auto !important;
+    }
+    
+    .container, .container-fluid {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .sidebar.col-lg-3,
+    .sidebar.col-md-4,
+    .main-content.col-lg-9,
+    .main-content.col-md-8 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .main-content {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+}
+
+
+/*------------ OVERLAY -------------*/
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.detalle {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.detalle img { /*Mejoro esto, las imagenes del overlay tienen tamaño maximo*/
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/*-------------- COOKIES ------------*/
+#aviso-cookies {
+    position: fixed;
+    bottom: 20px;
+    left: 35%;
+    background-color: #FFD700;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* ---------MODO NOCHE ----------- */
+body.noche { background-color: #121212 !important; }
+body.noche header { background-color: #560775 !important; }
+body.noche .content { background-color: #560775 !important; border-color: #FFD700 !important; }
+body.noche .sidebar { background-color: #333 !important; }
+body.noche .sidebar button { background-color: #222 !important; color: #FFD700 !important; border-color: #FFD700 !important; }
+body.noche footer { background-color: #560775 !important; }
+body.noche .formulario-creacion { background-color: #560775 !important; }
+
+/*------------------- ME ASEGURO DE QUE LAS SECCIONES Y SIDEBAR MANTENTAN FORMATO-----------------*/
+/* FUERA BOOTSTRAP */
+.sidebar {
+    display: none !important;
+}
+.sidebar.visible {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.main-content {
+    display: block !important;
+}
+
+.content {
+    display: none !important;
+}
+.content.active {
+    display: block !important;
+}
+
 
 /*------------ MEJORAS PARA MOVILES------------ */
 @media (max-width: 768px) {

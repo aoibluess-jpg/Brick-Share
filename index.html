@@ -47,7 +47,7 @@
 <!-------------------CONTAINER DIV CON LOS ELEMENTOS DE LA WEB------------------------>
     <div class="container-fluid mt-3">
         <div class="row">
-            <nav class="sidebar col-lg-3 col-md-4 bg-lego-yellow p-4" id="sidebar">
+            <nav class="sidebar col-lg-3 col-md-4 bg-lego-yellow p-4" id="sidebar" style="flex: 0 0 250px; width: 250px;">
                 <div class="d-flex flex-column gap-3">
                     <button onclick="mostrarSeccion('intro')" class="btn btn-light border-2 border-danger py-3 fw-bold">INTRODUCCIÓN</button>
                     <button onclick="mostrarSeccion('galeria')" class="btn btn-light border-2 border-danger py-3 fw-bold">GALERÍA LEGO</button>
@@ -58,7 +58,7 @@
                 </div>
             </nav>
 
-            <main class="main-content col-lg-9 col-md-8 p-4">
+            <main class="main-content col-lg-9 col-md-8 p-4" style="flex: 1 1 auto; width: calc(100% - 250px);">
                 <section id="intro" class="content active p-4">
                     <h2 class="text-danger border-bottom border-2 border-warning pb-2">BIENVENIDO A BRICK-SHARE</h2>
                     <p class="text-secondary fs-5">¡La comunidad definitiva para amantes de LEGO! Comparte tus construcciones, descubre ideas increíbles y conecta con otros builders.</p>
