@@ -145,22 +145,22 @@
                         <form id="formularioCreacion" onsubmit="enviarFormulario(event)">
                             <div class="mb-3">
                                 <label class="fw-bold">Constructor *</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o alias" class="form-control">
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o alias" class="form-control border-2 border-danger">
                             </div>
 
                             <div class="mb-3">
                                 <label class="fw-bold">Email *</label>
-                                <input type="email" id="email" name="email" required class="form-control">
+                                <input type="email" id="email" name="email" required class="form-control border-2 border-danger">
                             </div>
 
                             <div class="mb-3">
                                 <label class="fw-bold">Título *</label>
-                                <input type="text" id="titulo" name="titulo" required placeholder="Ej: Castillo Medieval MOC" class="form-control">
+                                <input type="text" id="titulo" name="titulo" required placeholder="Ej: Castillo Medieval MOC" class="form-control border-2 border-danger">
                             </div>
 
                             <div class="mb-3">
                                 <label class="fw-bold">Categoría</label>
-                                <select id="categoria" name="categoria" class="form-select">
+                                <select id="categoria" name="categoria" class="form-select  border-2 border-danger">
                                     <option value="arquitectura">Arquitectura</option>
                                         <option value="vehiculos">Vehículos</option>
                                         <option value="starwars">Star Wars</option>
@@ -172,12 +172,12 @@
 
                             <div class="mb-3">
                                 <label class="fw-bold">Descripción</label>
-                                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu construcción..." class="form-control"></textarea>
+                                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu construcción..." class="form-control border-2 border-danger"></textarea>
                             </div>
 
                             <div class="mb-3">
                                 <label class="fw-bold">Fotos *</label>
-                                <input type="file" id="archivo" name="archivo" accept=".png,.jpg,.jpeg" multiple required class="form-control">
+                                <input type="file" id="archivo" name="archivo" accept=".png,.jpg,.jpeg" multiple required class="form-control border-2 border-danger">
                                 <small class="text-secondary">Formatos: PNG, JPG (máx. 10MB)</small>
                             </div>
 
