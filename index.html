@@ -182,7 +182,7 @@
                             </div>
 
                             <div class="mb-3 form-check">
-                                <input type="checkbox" id="terminos" name="terminos" required class="form-check-input">
+                                <input type="checkbox" id="terminosCheckbox" name="terminos" required class="form-check-input">
                                 <label class="form-check-label">Acepto compartir mi creación *</label>
                             </div>
 
@@ -220,18 +220,29 @@
                         </form>
                     </div>  
                 </section>
+                
+                <section id="privacidad" class="content p-4">  
+                    <h2 class="text-danger border-bottom border-2 border-warning pb-2">Política de privacidad</h2>
+                    <p class="text-secondary fs-5">Brick-Share no almacena información personal. Cualquier formulario incluido es solo demostrativo y no envía datos a ningún servidor.</p>
+                </section>
+
+                <section id="terminos" class="content p-4">
+                    <h2 class="text-danger border-bottom border-2 border-warning pb-2">Términos y condiciones</h2> 
+                    <p class="text-dark fs-5">El uso de esta página es únicamente con fines educativos. No se permite el uso comercial ni la distribución de su contenido.</p>
+                </section>
+
             </main>
         </div>
     </div>
 
+
 <!-------------------PIE DE PAGINA------------------------>
     <footer class="bg-lego-red text-white text-center p-3 mt-4">
         <p class="mb-2">© 2025 Brick-Share. Todos los derechos reservados.</p>
-        <nav class="footer-links">
-            <a href="aviso-legal.html" class="text-warning text-decoration-none mx-2">Aviso legal</a> |
-            <a href="privacidad.html" class="text-warning text-decoration-none mx-2">Política de privacidad</a> |
-            <a href="terminos.html" class="text-warning text-decoration-none mx-2">Términos y condiciones</a>
-        </nav>
+            <nav>
+            <a href="#" onclick="mostrarSeccion('terminos')" class="text-warning mx-2">Términos</a>
+            <a href="#" onclick="mostrarSeccion('privacidad')" class="text-warning mx-2">Privacidad</a>
+         </nav>
     </footer>
 
 <!---- BOOTSTRAP COOKIES---->
